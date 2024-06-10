@@ -6,7 +6,48 @@
     <link rel="shortcut icon" href="./Resources/fav.png" type="image/x-icon" />
     <!-- Style Link -->
     <link rel="stylesheet" href="./Styles/root.css" />
+    <link rel="stylesheet" href="./Styles/header.css" />
     <title>Food Delivery</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Header Section Start -->
+    <header class="header container">
+      <!-- Navbar Section Start -->
+      <nav class="nav">
+        <div class="nav-logo">
+          <img src="./Resources/navbar/logo.png" alt="" />
+        </div>
+       <div class="navigation">
+        <div class="nav_options">
+          <ul class="nav_option">
+            <li><a href="./index.html">Home</a></li>
+            <li>Menu</li>
+            <li>Testimonial</li>
+            <li>Cart</li>
+          </ul>
+        </div>
+        <div class="nav_search">
+          <img src="./Resources/navbar/searchIcon.svg" alt="" />
+          <input type="search" placeholder="Search..." />
+          <hr class="vertical-hr" />
+          <div class="cart-container">
+            <i class="cart-icon"
+              ><img src="./Resources/navbar/search.png" alt=""
+            /></i>
+
+            <span class="cart-badge">3</span>
+          </div>
+        </div>
+       </div>
+        <div id="menu-icon" class="menu-icon hidden">
+          <img src="./Resources/navbar/menu.png" alt="">
+        </div>
+      </nav>
+      <!-- Navbar Section End -->
+    </header>
+    <!-- Header Section End -->
+
+    <!-- JS Connection -->
+     <script src="./JS/main.js"></script>
+  </body>
 </html>
