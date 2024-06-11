@@ -41,6 +41,49 @@
   flex-shrink: 0;
 }
 
+/* Popular Item style */
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.card{
+  width: 400px;
+  height: auto;
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 20px;
+  
+}
+.card-img img{
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card-info{
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 20px 10px;
+  
+}
+.info-left h1{
+font-size: 26px;
+font-weight: 700;
+}
+.info-left button{
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: #F48E28;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.amount{
+  margin-top: 50px;
+  font-weight: 500;
+}
 /* Testimonials Section Start */
 .testimonials {
   display: flex;
