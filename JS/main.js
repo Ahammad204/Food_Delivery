@@ -11,3 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
    
   }
 });
+
+// Newsletter subscription
+document.getElementById('subscribeButton').addEventListener('click', function() {
+  var emailInput = document.getElementById('emailInput').value.trim();
+  if (emailInput !== '') {
+      document.getElementById('successMessage').style.display = 'block';
+      document.getElementById('emailInput').value = '';
+  }
+});
