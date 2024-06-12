@@ -56,6 +56,7 @@
 }
 .card-img img{
   width: 100%;
+  
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -83,6 +84,22 @@ font-weight: 700;
 .amount{
   margin-top: 50px;
   font-weight: 500;
+}
+.check-all-menu button{
+  padding: 15px 10px;
+  border: none;
+  outline: none;
+  background-color: #F48E28;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.check-all-menu{
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+  
 }
 /* Testimonials Section Start */
 .testimonials {
@@ -178,6 +195,67 @@ font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
 }
+
+/* Footer Section style */
+footer{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  
+}
+.sec-1 img{
+width: 180px;
+height: 100px;
+margin-bottom: 20px;
+}
+.sec-1 p{
+  color:  #B6B6B6;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+.footer-social{
+  display: flex;
+  gap: 10px;
+}
+.info-img-bg{
+  background-color: #F5DDC4;
+  width: 42px;
+  height: 42px;
+  padding: 5px;
+  border-radius: 50px;
+  align-items: center;
+  margin-top: 20px;
+}
+.info-img-bg img{
+ width: 30px;
+ height: 30px;
+ margin: 5px;
+ cursor: pointer;
+}
+.footer-info h1{
+  
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.footer-list li{
+  list-style: none;
+  margin: 5px 0px;
+}
+.footer-input{
+  padding: 10px 5px;
+  background-color: #FFF;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+}
+.footer-input input{
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+}
+
 @media only screen and (min-width: 200px) and (max-width: 576px) {
   /* Service Section style */
   .services-cards {
@@ -245,5 +323,20 @@ font-weight: 700;
 .input button{
 width: 100%;
 margin-top: 20px;
+}
+/* Popular Item style */
+.cards{
+  
+  grid-template-columns: repeat(1,1fr);
+  
+}
+.card{
+  width: 100%;
+  
+}
+/* Footer Section style */
+footer{
+  flex-direction: column;
+ 
 }
 }

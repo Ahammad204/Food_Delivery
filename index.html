@@ -135,10 +135,10 @@
           <h5 class="small-section-title">Product</h5>
           <h1 class="section-title">Most Popular Items</h1>
         </div>
-        <div class="cards">
+        <div id="menu-cards" class="cards">
           <div class="card">
             <div class="card-img">
-              <img src="./Resources/PopularItem/img1.png" alt="">
+              <img src="./Resources/PopularItem/img1.png" alt="" />
             </div>
             <div class="card-info">
               <div class="info-left">
@@ -153,7 +153,7 @@
           </div>
           <div class="card">
             <div class="card-img">
-              <img src="./Resources/PopularItem/img2.png" alt="">
+              <img src="./Resources/PopularItem/img2.png" alt="" />
             </div>
             <div class="card-info">
               <div class="info-left">
@@ -168,7 +168,7 @@
           </div>
           <div class="card">
             <div class="card-img">
-              <img src="./Resources/PopularItem/img3.png" alt="">
+              <img src="./Resources/PopularItem/img3.png" alt="" />
             </div>
             <div class="card-info">
               <div class="info-left">
@@ -183,7 +183,7 @@
           </div>
           <div class="card">
             <div class="card-img">
-              <img src="./Resources/PopularItem/img4.png" alt="">
+              <img src="./Resources/PopularItem/img4.png" alt="" />
             </div>
             <div class="card-info">
               <div class="info-left">
@@ -198,7 +198,7 @@
           </div>
           <div class="card">
             <div class="card-img">
-              <img src="./Resources/PopularItem/img5.png" alt="">
+              <img src="./Resources/PopularItem/img5.png" alt="" />
             </div>
             <div class="card-info">
               <div class="info-left">
@@ -213,7 +213,7 @@
           </div>
           <div class="card">
             <div class="card-img">
-              <img src="./Resources/PopularItem/img6.png" alt="">
+              <img src="./Resources/PopularItem/img6.png" alt="" />
             </div>
             <div class="card-info">
               <div class="info-left">
@@ -227,9 +227,17 @@
             </div>
           </div>
         </div>
-        <div id="menu-button"  class="check-all-menu">
-          <button id="check-all-menu" onclick="handleShowMoreMenu()">Check All Menu</button>
-          <button id="show-less-menu" class="hidden" onclick="handleShowLessMenu()">Show Less Menu</button>
+        <div id="menu-button" class="check-all-menu">
+          <button id="check-all-menu" onclick="handleShowMoreMenu()">
+            Check All Menu
+          </button>
+          <button
+            id="show-less-menu"
+            class="hidden"
+            onclick="handleShowLessMenu()"
+          >
+            Show Less Menu
+          </button>
         </div>
       </section>
       <!-- Popular Item Section End-->
@@ -267,7 +275,8 @@
             </div>
             <h1>Fast Delivery</h1>
             <p>
-              Get your favorite meals delivered hot and fresh, faster than ever! Enjoy speedy service and delicious food at your doorstep
+              Get your favorite meals delivered hot and fresh, faster than ever!
+              Enjoy speedy service and delicious food at your doorstep
             </p>
           </div>
         </div>
@@ -275,53 +284,143 @@
       <!-- Services Section End -->
 
       <!-- Testimonials Section Start -->
-       <section class="testimonials_section">
+      <section class="testimonials_section">
         <div class="titles">
           <h5 class="small-section-title">Testimonials</h5>
           <h1 class="section-title">Our Happy Client Says</h1>
         </div>
         <div class="testimonials">
           <div class="testimonial-container">
-            <div class="arrow left-arrow"><img src="./Resources/Testimonial/left.png" alt=""></div> <!-- Left Arrow -->
+            <div class="arrow left-arrow">
+              <img src="./Resources/Testimonial/left.png" alt="" />
+            </div>
+            <!-- Left Arrow -->
             <div class="testimonial-card">
               <div class="user_info">
-                <img src="./Resources/Testimonial/profile1.png" alt="">
+                <img src="./Resources/Testimonial/profile1.png" alt="" />
                 <div>
-                  <h1 style="font-size: 18px; font-weight: 600;">Willians Jhone</h1>
-                  <p style="font-size: 13px; font-weight: 400;">CEO & Co-Founder</p>
+                  <h1 style="font-size: 18px; font-weight: 600">
+                    Willians Jhone
+                  </h1>
+                  <p style="font-size: 13px; font-weight: 400">
+                    CEO & Co-Founder
+                  </p>
                 </div>
               </div>
-              <p>Absolutely amazing! The food was delicious, and the service was impeccable. My go-to spot for a perfect meal. 🌟</p>
+              <p>
+                Absolutely amazing! The food was delicious, and the service was
+                impeccable. My go-to spot for a perfect meal. 🌟
+              </p>
             </div>
-            <div class="arrow right-arrow"><img src="./Resources/Testimonial/right.png" alt=""></div> <!-- Right Arrow -->
+            <div class="arrow right-arrow">
+              <img src="./Resources/Testimonial/right.png" alt="" />
+            </div>
+            <!-- Right Arrow -->
           </div>
 
           <div class="testimonial-img">
-            <img src="./Resources/Testimonial/sidebar.png" alt="">
+            <img src="./Resources/Testimonial/sidebar.png" alt="" />
           </div>
-
         </div>
-       </section>
+      </section>
       <!-- Testimonials Section End -->
-       <!-- Newsletter section start -->
-        <section class="newsletterSection">
-          <div class="news-img">
-            <img src="./Resources/Newsletter/burger.png" alt="">
+      <!-- Newsletter section start -->
+      <section class="newsletterSection">
+        <div class="news-img">
+          <img src="./Resources/Newsletter/burger.png" alt="" />
+        </div>
+        <div class="newsInfo">
+          <h1>Subscribe To Our Newsletter</h1>
+          <p>
+            Subscribe for our newsletter to receive the latest news, <br />
+            special offers, and exciting updates from our <br />
+            kitchen straight to your email. 🎉🍽️
+          </p>
+          <div class="input">
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Enter Your E-mail"
+            />
+            <button id="subscribeButton">Subscribe</button>
           </div>
-          <div class="newsInfo">
-            <h1>Subscribe To Our Newsletter</h1>
-            <p>Subscribe for our newsletter to receive the latest news, <br> special offers, and exciting updates from our  <br> kitchen straight to your email. 🎉🍽️</p>
-            <div class="input">
-              <input type="email" id="emailInput" placeholder="Enter Your E-mail">
-              <button id="subscribeButton">Subscribe</button>
-
-            </div>
-            <div id="successMessage" style="display: none; color: green;">Subscribed successfully!</div>
+          <div id="successMessage" style="display: none; color: green">
+            Subscribed successfully!
           </div>
-        </section>
-       <!-- Newsletter section end -->
+        </div>
+      </section>
+      <!-- Newsletter section end -->
     </main>
     <!-- Main Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="container">
+      <div class="sec-1">
+        <img src="./Resources/navbar/logo.png" alt="" />
+        <p>we’re passionate about food! From our mouth-watering <br>
+          dishes to our friendly service, we strive to make every visit special. <br>
+          Come dine with us and experience the difference. 🍽️❤️</p>
+          <div class="footer-social">
+            <div class="info-img-bg">
+              <img src="./Resources/Footer/facebook.png" alt="" />
+            </div>
+            <div class="info-img-bg">
+              <img src="./Resources/Footer/instagram.png" alt="" />
+            </div>
+            <div class="info-img-bg">
+              <img src="./Resources/Footer/linkedin.png" alt="" />
+            </div>
+            <div class="info-img-bg">
+              <img src="./Resources/Footer/twitter.png" alt="" />
+            </div>
+         
+          </div>
+      </div>
+      <div class="footer-info">
+        
+          <h1>Opening Restaurant</h1>
+
+        <ul class="footer-list">
+          <li>Sat-Wet: 09:00am-10:00PM</li>
+          <li>Thursday: 09:00am-11:00PM</li>
+          <li>Friday: 09:00am-8:00PM</li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        
+          <h1>User Link</h1>
+
+        <ul class="footer-list">
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Order Delivery</li>
+          <li>Payment & Tex</li>
+          <li>Terms of Services</li>
+        </ul>
+      </div>
+      <div class="footer-info">
+        
+          <h1>Contact Us</h1>
+
+        <ul class="footer-list">
+          <li>Anowara, Chattagram</li>
+          <li>+88 017 0000 0000</li>
+          <li>+88 018 0000 0000</li>
+        </ul>
+        <div class="footer-input">
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Enter Your E-mail"
+          />
+          <img src="./Resources/Footer/arrow.png" alt="">
+        </div>
+      </div>
+
+    
+      
+    </footer>
+    <!-- Footer Section End -->
     <!-- JS Connection -->
     <script src="./JS/main.js"></script>
   </body>

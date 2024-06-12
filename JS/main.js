@@ -22,53 +22,100 @@ document
   });
 
 // menu items
-const imageArray = [
+const menuArray = [
   {
-    name:""
-    url: "./resource/Projects/projects_1.jpg",
+    name:"Sandwich",
+    url: "../Resources/PopularItem/img7.png",
+    rating:4.2,
+    amount: 10.20
   },
   {
-    url: "./resource/Projects/projects_2.jpg",
+    name:"Snacks",
+    url: "../Resources/PopularItem/img8.png",
+    rating:4.8,
+    amount: 12.20
   },
   {
-    url: "./resource/Projects/projects_3.jpg",
+    name:"Ice Cream",
+    url: "../Resources/PopularItem/img9.png",
+    rating:5.0,
+    amount: 5
   },
   {
-    url: "./resource/Projects/projects_4.jpg",
+    name:"Creamy Sandwich",
+    url: "../Resources/PopularItem/img10.png",
+    rating:5.0,
+    amount: 5
   },
+  {
+    name:"Noodles",
+    url: "../Resources/PopularItem/img11.png",
+    rating:4.0,
+    amount: 25.25
+  },
+  {
+    name:"Meat",
+    url: "../Resources/PopularItem/img12.png",
+    rating:5.0,
+    amount: 35.25
+  },
+ 
 ];
 
-function handleShowMoreProject() {
-  const projectContainer = document.getElementById("projects");
 
-  for (const item of imageArray) {
-    const projectDivImage = document.createElement("div");
+const addedCards = [];
 
-    projectDivImage.classList.add("project");
-    projectDivImage.innerHTML = `  <div class="card">
+function handleShowMoreMenu() {
+    const menuContainer = document.getElementById("menu-cards");
+
+    for (const item of menuArray) {
+        const cardDiv = document.createElement("div");
+        cardDiv.classList.add("card");
+
+        // Assign a unique identifier to each card
+        cardDiv.dataset.itemId = item.name.replace(/\s+/g, '-').toLowerCase();
+
+        cardDiv.innerHTML = `
             <div class="card-img">
-              <img src="./Resources/PopularItem/img5.png" alt="">
+                <img src="${item.url}" alt="">
             </div>
             <div class="card-info">
-              <div class="info-left">
-                <h1>Chicken Pot Pie</h1>
-                <button>Add to cart</button>
-              </div>
-              <div class="info-right">
-                <p>⭐ 4.2</p>
-                <p class="amount">$10.50</p>
-              </div>
+                <div class="info-left">
+                    <h1>${item.name}</h1>
+                    <button>Add to cart</button>
+                </div>
+                <div class="info-right">
+                    <p>⭐ ${item.rating}</p>
+                    <p class="amount">$ ${item.amount}</p>
+                </div>
             </div>
-          </div>`;
+        `;
 
-    console.log(projectDivImage);
+        menuContainer.appendChild(cardDiv);
+        addedCards.push(cardDiv); 
+    }
 
-    projectContainer.appendChild(projectDivImage);
-
-    const hideShowAllButton = document.getElementById("check-all-projects");
+    const hideShowAllButton = document.getElementById("check-all-menu");
     hideShowAllButton.classList.add("hidden");
 
-    const ShowLessButton = document.getElementById("show-less-projects");
+    const ShowLessButton = document.getElementById("show-less-menu");
     ShowLessButton.classList.remove("hidden");
-  }
+}
+
+function handleShowLessMenu() {
+    const menuContainer = document.getElementById("menu-cards");
+
+    
+    for (const card of addedCards) {
+        menuContainer.removeChild(card);
+    }
+
+
+    addedCards.length = 0;
+
+    const hideShowAllButton = document.getElementById("check-all-menu");
+    hideShowAllButton.classList.remove("hidden");
+
+    const ShowLessButton = document.getElementById("show-less-menu");
+    ShowLessButton.classList.add("hidden");
 }
