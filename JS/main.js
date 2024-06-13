@@ -119,3 +119,37 @@ function handleShowLessMenu() {
     const ShowLessButton = document.getElementById("show-less-menu");
     ShowLessButton.classList.add("hidden");
 }
+
+// Add To cart 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const addToCartButtons = document.querySelectorAll('button');
+  
+  addToCartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          const card = button.closest('.card');
+          const itemName = card.querySelector('h1').textContent;
+          const itemPrice = card.querySelector('.amount').textContent.replace('$', '');
+          const itemRating = card.querySelector('.info-right p:first-child').textContent.replace('⭐', '').trim();
+          
+          const item = {
+              name: itemName,
+              price: parseFloat(itemPrice),
+              rating: parseFloat(itemRating)
+          };
+
+          let cart = localStorage.getItem('cart');
+          if (cart) {
+              cart = JSON.parse(cart);
+          } else {
+              cart = [];
+          }
+          cart.push(item);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          
+          alert(`${itemName} has been added to the cart!`);
+      });
+  });
+});
+
+
